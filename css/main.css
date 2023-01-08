@@ -4,6 +4,7 @@
 :root {
     --main-color: #19c8fa;
     --transparent-color: rgba(15, 116, 143, 70%);
+    --section-padding: 100px;
 }
 
 
@@ -27,7 +28,6 @@ html {
 
 body {
     font-family: "Open Sans", "Helvetica Neue", sans-serif;
-    background-color: #555;
 }
 
 .container {
@@ -66,6 +66,52 @@ ul {
 }
 
 /* End global styling */
+
+
+/* Styling the main components of the page */
+.main-heading {
+    text-align: center;
+}
+
+.main-heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+}
+
+.main-heading h2::before,
+.main-heading h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-heading h2::before {
+    height: 2px;
+    background-color: #333;
+    bottom: -30px;
+    width: 120px;
+}
+
+.main-heading h2::after {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    bottom: -38px;
+    background-color: white;
+}
+
+.main-heading p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+}
+/* End Styling the main components of the page */
+
 
 /* Styling the Header section */
 header {
@@ -281,3 +327,375 @@ header nav .search i {
 }
 
 /* End styling the landing part of the page */
+
+/* Styling the services section */
+.services {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+@media (min-width: 768px) {
+    .services .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        column-gap: 40px;
+        row-gap: 60px;
+    }
+}
+
+.services .service {
+    display: flex;
+}
+
+.services .service i {
+    margin-right: 50px;
+}
+
+.services .service h3 {
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+
+.services .service p {
+    line-height: 1.8;
+    color: #777;
+}
+
+@media (max-width: 767px) {
+    .services .service {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #bbb;
+    }
+    .services .service i {
+        margin: 5px auto;
+    }
+
+    .services .service p {
+        width: 85%;
+        margin: auto;
+        text-align: justify;
+    }
+}
+/* End styling the services section */
+
+/* Styling the Design section */
+.design {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url("../images/design-features.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.design::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 35%);
+}
+
+.design .image,
+.design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.design .image {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .design .image {
+        display: none;
+    }
+}
+
+.design .image img {
+   position: relative;
+   bottom: -9.5rem;
+}
+
+.design .text {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+.design .text h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.design .text ul li {
+    padding: 12px 0;
+}
+
+.design .text ul li::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f26c';
+    font-weight: 900;
+    margin-right: 10px;
+    position: relative;
+    top: 1px;
+}
+/* End styling the Design section */
+
+
+/* Styling the Portfolio section */
+
+.portfolio {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+
+.portfolio .shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio .shuffle li {
+    padding: 10px;
+}
+
+.portfolio .shuffle li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+.portfolio .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+.portfolio .images-container .box {
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .portfolio .images-container .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1199px) {
+    .portfolio .images-container .box {
+        flex-basis: 25%;
+    }
+}
+
+
+.portfolio .images-container .box figure img {
+    max-width: 100%;
+}
+
+.portfolio .images-container .box figure figcaption {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    position: absolute;
+    transition: .3s;
+    bottom: -100%;
+}
+
+
+.portfolio .images-container .box figure:hover figcaption {
+    bottom: 0;
+}
+
+.portfolio .images-container .box figure:hover figcaption h4 {
+    padding-bottom: 10px;
+}
+
+
+.portfolio .images-container .box figure:hover figcaption p {
+    color: var(--main-color);
+}
+
+.portfolio .more {
+    display: block;
+    color: white;
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    width: fit-content;
+    margin: 25px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* End styling the Portfolio section */
+
+/* styling video section */
+
+.video {
+    position: relative;
+}
+
+.video::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 35%);
+}
+
+.video video {
+    width: 100%;
+}
+
+.video .text {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 50px;
+    background-color: var(--transparent-color);
+    color: white;
+    text-align: center;
+}
+
+.video .text h2 {
+    margin: 0 0 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.video .text p {
+    margin-bottom: 20px;
+}
+
+.video .text button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+}
+
+/* End styling video section */
+
+/* styling about section */
+.about {
+    padding-top: var(--section-padding);
+    overflow: hidden;
+    text-align: center;
+}
+
+.about img {
+    position: relative;
+    bottom: -120px;
+    margin-top: -120px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .about img {
+        bottom: -60px;
+        margin-top: -60px;
+    }
+    
+}
+/* End styling about section */
+
+/* Styling stats section */
+.stats {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    text-align: center;
+    background-image: url('../images/stats.jpg');
+    background-size: cover;
+    position: relative;    
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 45%);
+}
+
+.stats .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stats .container .box {
+    padding: 50px;
+    color: white;
+    background-color: var(--transparent-color);
+    transition: .3s;
+}
+
+@media (max-width:767px) {
+    .stats .container .box {
+        flex-basis: 100%;
+    }
+
+    .stats .container .box:not(:last-of-type) {
+        border-bottom: 1px solid #999;
+    }
+}
+
+@media (min-width:768px) {
+    .stats .container .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width:992px) {
+    .stats .container .box {
+        flex-basis: 25%;
+    }
+}
+
+.stats .container .box:hover {
+    background-color: rgba(15, 116, 143, 35%);
+    color: wheat;
+}
+
+.stats .container .box i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background-color: #222;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+}
+
+.stats .container .box .number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+.stats .container .box p {
+    font-size: 14px;
+}
+/* End styling stats section */
+
+/* Styling skills section */
+.skills {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+}
+/* End styling skills section */
