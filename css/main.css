@@ -838,7 +838,12 @@ header nav .search i {
 
 .pricing .plans .plan {
     text-align: center;
-    background-color: #f0f0f0;
+}
+
+@media (max-width: 767px) {
+    .pricing .plans .plan {
+        background-color: #f0f0f0;
+    }
 }
 
 .pricing .plans .plan .head {
