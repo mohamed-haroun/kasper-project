@@ -1,5 +1,4 @@
 /* Start global styling */
-
 /* Variables of the page */
 :root {
     --main-color: #19c8fa;
@@ -64,7 +63,6 @@ ul {
         width: 1170px;
     }
 }
-
 /* End global styling */
 
 
@@ -110,7 +108,6 @@ ul {
     margin: 0 auto 100px;
     max-width: 100%;
 }
-
 /* End Styling the main components of the page */
 
 
@@ -225,7 +222,6 @@ header nav .search i {
     transform: translateY(-50%);
     right: 0;
 }
-
 /* End styling the Header section */
 
 /* Styling the landing part of the page */
@@ -326,7 +322,6 @@ header nav .search i {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
-
 /* End styling the landing part of the page */
 
 /* Styling the services section */
@@ -381,7 +376,6 @@ header nav .search i {
         text-align: justify;
     }
 }
-
 /* End styling the services section */
 
 /* Styling the Design section */
@@ -453,12 +447,10 @@ header nav .search i {
     position: relative;
     top: 1px;
 }
-
 /* End styling the Design section */
 
 
 /* Styling the Portfolio section */
-
 .portfolio {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -540,11 +532,9 @@ header nav .search i {
     text-decoration: none;
     text-transform: uppercase;
 }
-
 /* End styling the Portfolio section */
 
 /* styling video section */
-
 .video {
     position: relative;
 }
@@ -590,7 +580,6 @@ header nav .search i {
     padding: 10px 20px;
     border: none;
 }
-
 /* End styling video section */
 
 /* styling about section */
@@ -614,7 +603,6 @@ header nav .search i {
     }
 
 }
-
 /* End styling about section */
 
 /* Styling stats section */
@@ -697,7 +685,6 @@ header nav .search i {
 .stats .container .box p {
     font-size: 14px;
 }
-
 /* End styling stats section */
 
 /* Styling skills section */
@@ -833,11 +820,9 @@ header nav .search i {
     right: -7px;
     top: -15px;
 }
-
 /* End styling skills section */
 
 /* Styling the pricing section */
-
 .pricing {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -952,7 +937,6 @@ header nav .search i {
     background-color: white;
     color: var(--main-color);
 }
-
 /* End styling the pricing section */
 
 /* Styling The subscribe section */
@@ -1043,11 +1027,9 @@ header nav .search i {
         margin: 30px 0 0;
     }
 }
-
 /* End styling The subscribe section */
 
 /* styling the contact section */
-
 .contact {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
@@ -1143,7 +1125,6 @@ header nav .search i {
 .contact .content .info .addr address {
     color: #777;
 }
-
 /* End styling the contact section */
 
 /* Styling footer of the page */
@@ -1187,5 +1168,4 @@ footer .copyright span {
     font-weight: bold;
     color: var(--main-color);    
 }
-
 /* End styling footer of the page */
