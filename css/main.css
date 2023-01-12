@@ -110,6 +110,7 @@ ul {
     margin: 0 auto 100px;
     max-width: 100%;
 }
+
 /* End Styling the main components of the page */
 
 
@@ -369,6 +370,7 @@ header nav .search i {
         margin-bottom: 30px;
         border-bottom: 1px solid #bbb;
     }
+
     .services .service i {
         margin: 5px auto;
     }
@@ -379,6 +381,7 @@ header nav .search i {
         text-align: justify;
     }
 }
+
 /* End styling the services section */
 
 /* Styling the Design section */
@@ -422,8 +425,8 @@ header nav .search i {
 }
 
 .design .image img {
-   position: relative;
-   bottom: -9.5rem;
+    position: relative;
+    bottom: -9.5rem;
 }
 
 .design .text {
@@ -450,6 +453,7 @@ header nav .search i {
     position: relative;
     top: 1px;
 }
+
 /* End styling the Design section */
 
 
@@ -536,6 +540,7 @@ header nav .search i {
     text-decoration: none;
     text-transform: uppercase;
 }
+
 /* End styling the Portfolio section */
 
 /* styling video section */
@@ -607,8 +612,9 @@ header nav .search i {
         bottom: -60px;
         margin-top: -60px;
     }
-    
+
 }
+
 /* End styling about section */
 
 /* Styling stats section */
@@ -618,7 +624,7 @@ header nav .search i {
     text-align: center;
     background-image: url('../images/stats.jpg');
     background-size: cover;
-    position: relative;    
+    position: relative;
 }
 
 .stats::before {
@@ -691,6 +697,7 @@ header nav .search i {
 .stats .container .box p {
     font-size: 14px;
 }
+
 /* End styling stats section */
 
 /* Styling skills section */
@@ -706,19 +713,19 @@ header nav .search i {
 }
 
 @media (min-width: 992px) {
-    .our-skills .container > section {
+    .our-skills .container>section {
         flex-basis: 45%;
     }
 }
 
-.our-skills .container > section > h3 {
+.our-skills .container>section>h3 {
     margin: 0 0 30px;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
 }
 
-.our-skills .container > section > p {
+.our-skills .container>section>p {
     color: #777;
     line-height: 1.8;
     text-align: center;
@@ -731,6 +738,7 @@ header nav .search i {
     align-items: center;
     margin-bottom: 30px;
 }
+
 .our-skills .testimonials .content img {
     width: 110px;
     border-radius: 50%;
@@ -742,6 +750,7 @@ header nav .search i {
         flex-direction: column;
         text-align: center;
     }
+
     .our-skills .testimonials .content img {
         margin: 0 auto 20px;
     }
@@ -783,15 +792,18 @@ header nav .search i {
 .our-skills .skills .progress-holder {
     margin-bottom: 40px;
 }
+
 .our-skills .skills .progress-holder h4 {
     margin-bottom: 15px;
     font-weight: normal;
     text-transform: uppercase;
 }
+
 .our-skills .skills .progress-holder .progress {
     background-color: #dedadc;
     height: 25px;
 }
+
 .our-skills .skills .progress-holder .progress span {
     display: block;
     background-color: var(--main-color);
@@ -811,6 +823,7 @@ header nav .search i {
     text-align: center;
     border-radius: 4px;
 }
+
 .our-skills .skills .progress-holder .progress span::after {
     content: "";
     position: absolute;
@@ -1030,6 +1043,7 @@ header nav .search i {
         margin: 30px 0 0;
     }
 }
+
 /* End styling The subscribe section */
 
 /* styling the contact section */
@@ -1037,6 +1051,97 @@ header nav .search i {
 .contact {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
+}
+
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .contact .content {
+        flex-direction: column;
+    }
+}
+
+.contact .content form {
+    flex-basis: 70%;
+}
+
+.contact .content form .main-input {
+    padding: 20px;
+    display: block;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.contact .content form .main-input:focus {
+    outline: none;
+}
+
+.contact .content form textarea.main-input {
+    height: 200px;
+}
+
+.contact .content form input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    padding: 20px;
+    border: none;
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.contact .content .info {
+    flex-basis: 25%;
+}
+
+.contact .content .info .phone h4,
+.contact .content .info .addr h4 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.contact .content .info .phone .tel {
+    display: block;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.contact .content .info .addr h4 {
+    margin-top: 100px;
+}
+
+@media (max-width: 767px) {
+    .contact .content .info {
+        margin-bottom: 30px;
+        order: -1;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .contact .content .info .phone{
+        padding-right: 10px;
+        border-right: 1px solid var(--main-color);
+    }
+
+    .contact .content .info .phone,
+    .contact .content .info .addr {
+        padding: 5px;
+    }
+
+    .contact .content .info .addr h4 {
+        margin-top: 0px;
+    }
+}
+
+.contact .content .info .addr address {
+    color: #777;
 }
 
 /* End styling the contact section */
